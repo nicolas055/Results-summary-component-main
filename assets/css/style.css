@@ -41,16 +41,15 @@ main {
 }
 /*Left Box*/
 main .result-box {
-    flex: 1;
+    width: 50%;
     padding: 40px 60px;
     background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
     border-radius: 30px;
     border: 1px solid var(--Cobalt-blue);
 }
-main .result-box h3 {
+main .box-title {
     margin: 0;
     color: var(--Light-lavender);
-    font-weight: 800;
     text-align: center;
     font-size: 23px;
     margin-bottom: 30px;
@@ -94,7 +93,75 @@ main .result-box .result-feedback p {
 
 
 
-main .summary-box {
-    flex: 1;
-    padding: 40px 60px;
+.summary-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 40px 40px;
+}
+.summary-box .box-title {
+    text-align: left;
+    color: var(--Dark-gray-blue);
+    margin-bottom: 0;
+}
+.summary-box .summary-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 272px;
+    font-size: 16px;
+    
+}
+.summary-box .summary-results-container .summary-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    border-radius: 12px;
+    padding: 0 20px;
+    background-color: var(--Pale-blue);
+}
+.summary-box .summary-results-container .summary-result .result-field {
+    display: flex;
+    align-items: center;
+}
+.summary-box .summary-results-container .summary-result .result-field img {
+    margin-right: 10px;
+}
+.summary-box .summary-results-container .summary-result .result-field #reaction {
+    color: var(--light-red);
+}
+.summary-box .summary-results-container .summary-result .result-field #memory {
+    color: var(--Orangey-yellow);
+}
+.summary-box .summary-results-container .summary-result .result-field #verbal {
+    color: var(--Green-teal);
+}
+.summary-box .summary-results-container .summary-result .result-field #visual {
+    color: var(--Cobalt-blue);
+}
+.summary-box .summary-results-container .summary-result .result-points {
+    color: #999999;
+    
+}
+.summary-box .summary-results-container .summary-result .result-points span {
+    color: var(--Dark-gray-blue);
+}
+
+.summary-box .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--Dark-gray-blue), var(--Dark-gray-blue));
+    color: var(--White);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    height: 50px;
+    margin-bottom: 17px;
+    transition: background-image 1s;
+}
+.summary-box .button:hover {
+    background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
 }
