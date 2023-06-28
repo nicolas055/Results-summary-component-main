@@ -153,15 +153,34 @@ main .result-box .result-feedback p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--Dark-gray-blue), var(--Dark-gray-blue));
     color: var(--White);
     text-decoration: none;
     font-weight: bold;
+    position: relative;
     border-radius: 40px;
     height: 50px;
     margin-bottom: 17px;
-    transition: background-image 1s;
 }
-.summary-box .button:hover {
+.summary-box .button span {
+    z-index: 99;
+}
+.summary-box .button #color1 {
+    background-color: var(--Dark-gray-blue);
+}
+.summary-box .button #color2 {
     background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    opacity: 0;
+    transition: opacity 0.3s;
 }
+.summary-box .button #color1,
+.summary-box .button #color2 {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+ .summary-box .button:hover #color2 {
+    opacity: 1;
+} 
