@@ -13,10 +13,10 @@
     --Cobalt-blue: hsl(234, 85%, 45%);
 
     /* Primary with low opacity */
-    --light-red-o: rgba(255, 87, 87, .05);
-    --Orangey-yellow-o: rgba(255, 176, 31, .05);
-    --Green-teal-o: rgba(0, 189, 145, .05);
-    --Cobalt-blue-o: rgb(17, 37, 212, .05);
+    --light-red-o: rgba(255, 87, 87, .065);
+    --Orangey-yellow-o: rgba(255, 176, 31, .065);
+    --Green-teal-o: rgba(0, 189, 145, .065);
+    --Cobalt-blue-o: rgb(17, 37, 212, .065);
 
     /*Gradients*/
     --Light-slate-blue: hwb(252 34% 0%);
@@ -43,6 +43,9 @@ main {
     display: flex;
     width: 734px;
     height: 513px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, .2) ;
+    border-radius: 30px;
+    background-color: var(--White);
     
 }
 
@@ -51,8 +54,7 @@ main {
     width: 50%;
     padding: 40px 60px;
     background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
-    border-radius: 30px;
-    border: 1px solid var(--Cobalt-blue);
+    border-radius: inherit;
 }
 .box-title {
     margin: 0;
@@ -105,6 +107,7 @@ main {
     justify-content: space-between;
     width: 50%;
     padding: 40px 40px;
+    border-radius: inherit;
 }
 .summary-box .box-title {
     text-align: left;
@@ -181,6 +184,7 @@ main {
     height: 50px;
     margin-bottom: 17px;
 }
+/* Button Transition Hover Effect */
 .summary-box .button span {
     z-index: 99;
 }
@@ -201,6 +205,7 @@ main {
     top: 0;
     left: 0;
 }
- .summary-box .button:hover #color2 {
+.summary-box .button:hover #color2 {
     opacity: 1;
-} 
+}
+
