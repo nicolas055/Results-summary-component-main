@@ -12,6 +12,12 @@
     --Green-teal: hsl(166, 100%, 37%);
     --Cobalt-blue: hsl(234, 85%, 45%);
 
+    /* Primary with low opacity */
+    --light-red-o: rgba(255, 87, 87, .05);
+    --Orangey-yellow-o: rgba(255, 176, 31, .05);
+    --Green-teal-o: rgba(0, 189, 145, .05);
+    --Cobalt-blue-o: rgb(17, 37, 212, .05);
+
     /*Gradients*/
     --Light-slate-blue: hwb(252 34% 0%);
     --Light-royal-blue: hsl(241, 81%, 54%);
@@ -39,22 +45,23 @@ main {
     height: 513px;
     
 }
-/*Left Box*/
-main .result-box {
+
+
+.result-box {
     width: 50%;
     padding: 40px 60px;
     background-image: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
     border-radius: 30px;
     border: 1px solid var(--Cobalt-blue);
 }
-main .box-title {
+.box-title {
     margin: 0;
     color: var(--Light-lavender);
     text-align: center;
     font-size: 23px;
     margin-bottom: 30px;
 }
-main .result-box .result-number-container {
+.result-box .result-number-container {
     width: 200px;
     height: 200px;
     background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
@@ -62,33 +69,32 @@ main .result-box .result-number-container {
     margin: auto;
     border-radius: 100%;
 }
-main .result-box .result-number-container h1 {
+.result-box .result-number-container h1 {
     font-size: 60px;
     color: var(--White);
     margin: 0;
     padding-top: calc(50% - (78px / 2));
 }
-main .result-box .result-number-container span {
+.result-box .result-number-container span {
     display: block;
     font-size: 17px;
     margin-top: -3px;
     color: rgba(255, 255, 255, .5);
 }
-main .result-box .result-feedback {
+.result-box .result-feedback {
     text-align: center;
 }
-main .result-box .result-feedback h2 {
+.result-box .result-feedback h2 {
     color: var(--White);
     font-size: 35px;
     margin-bottom: 15px;
 }
-main .result-box .result-feedback p {
+.result-box .result-feedback p {
     color: var(--Light-lavender);
     font-size: 17px;
     margin-top: 0;
     
 }
-
 
 
 
@@ -120,8 +126,21 @@ main .result-box .result-feedback p {
     height: 55px;
     border-radius: 12px;
     padding: 0 20px;
-    background-color: var(--Pale-blue);
+    background-color: black;
 }
+.summary-box .summary-results-container .summary-result.summary-result-reaction {
+    background-color: var(--light-red-o);
+}
+.summary-box .summary-results-container .summary-result.summary-result-memory {
+    background-color: var(--Orangey-yellow-o);
+}
+.summary-box .summary-results-container .summary-result.summary-result-verbal {
+    background-color: var(--Green-teal-o);
+}
+.summary-box .summary-results-container .summary-result.summary-result-visual {
+    background-color: var(--Cobalt-blue-o);
+}
+
 .summary-box .summary-results-container .summary-result .result-field {
     display: flex;
     align-items: center;
@@ -149,6 +168,7 @@ main .result-box .result-feedback p {
     color: var(--Dark-gray-blue);
 }
 
+/* Summary Continue Button */
 .summary-box .button {
     display: flex;
     justify-content: center;
