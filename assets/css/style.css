@@ -106,7 +106,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-    padding: 40px 40px;
+    padding: 40px;
     border-radius: inherit;
 }
 .summary-box .box-title {
@@ -209,3 +209,24 @@ main {
     opacity: 1;
 }
 
+/* Responsiviness */
+
+@media (max-width: 450px) {
+    body {
+        display: block;
+        height: auto;
+    }
+    main {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    .result-box,
+    .summary-box {
+        width: auto;
+    }
+    .summary-box {
+        padding: 30px;
+        height: 480px;
+    }
+}
